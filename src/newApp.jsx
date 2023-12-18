@@ -2,7 +2,8 @@ import hero from './assets/owl.jpeg';
 const newApp = () => {
   return (
     <div className='font-outfit justify-end items-center bg-stone-950 flex flex-col px-20 py-12 max-md:px-5'>
-      <div className='w-full max-w-[1564px] mt-56 max-md:max-w-full max-md:mt-10'>
+      {/* hero */}
+      <div className='w-full max-w-[1564px] mt-14 max-md:max-w-full max-md:mt-10'>
         <div className='gap-5 flex max-md:flex-col max-md:items-center max-md:gap-0'>
           <div className='flex flex-col items-stretch w-[55%] mt-[25%] max-md:w-full max-md:ml-0 max-md:mt-8 max-md:order-2'>
             <div className='justify-center items-stretch flex flex-col'>
@@ -23,16 +24,18 @@ const newApp = () => {
           </div>
         </div>
       </div>
-      {/* <div className='text-orange-300 text-center text-3xl font-bold leading-9 tracking-wider uppercase max-w-[439px] mt-72 max-md:max-w-full max-md:mt-10'>
+      {/* skills */}
+      <div className='text-orange-300 text-center text-xl font-bold tracking-wider uppercase mt-72 max-md:max-w-full  max-lg:text-lg max-md:mt-48'>
         what products made of
       </div>
-      <div className='text-white text-center text-5xl font-bold leading-[50.6px] tracking-wider whitespace-nowrap mt-2.5 max-md:text-4xl'>
+      <div className='text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap mt-2.5'>
         skills
       </div>
-      <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide max-w-[564px] mt-2.5 max-md:max-w-full'>
+      <div className='text-zinc-400 text-center text-xl tracking-wide mt-2.5  max-lg:text-base'>
         front-end , back-end and another-end
       </div>
-      <div className='w-full max-w-[1494px] mt-52 max-md:max-w-full max-md:mt-10'>
+      {/* icons */}
+      {/* <div className='w-full max-w-[1440px] mt-52 max-md:max-w-full max-md:mt-10'>
         <div className='gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0'>
           <div className='flex flex-col items-stretch w-[36%] max-md:w-full max-md:ml-0'>
             <div className='items-center flex flex-col px-0.5 max-md:mt-10'>
@@ -176,8 +179,8 @@ const newApp = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className='text-orange-300 text-center text-2xl font-bold leading-7 tracking-wide uppercase whitespace-nowrap mt-80 max-md:mt-10'>
+      </div> */}
+      {/* <div className='text-orange-300 text-center text-2xl font-bold leading-7 tracking-wide uppercase whitespace-nowrap mt-80 max-md:mt-10'>
         the History of Innovation
       </div>
       <div className='text-white text-center text-5xl font-bold leading-[50.6px] tracking-wider whitespace-nowrap mt-4 max-md:text-4xl'>
@@ -268,8 +271,8 @@ const newApp = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className='text-orange-300 text-center text-2xl font-bold leading-7 tracking-wide uppercase whitespace-nowrap mt-80 max-md:mt-10'>
+      </div> */}
+      {/* <div className='text-orange-300 text-center text-2xl font-bold leading-7 tracking-wide uppercase whitespace-nowrap mt-80 max-md:mt-10'>
         From zero to pixels
       </div>
       <div className='text-white text-center text-5xl font-bold leading-[50.6px] tracking-wider whitespace-nowrap mt-4 max-md:text-4xl'>
@@ -338,8 +341,8 @@ const newApp = () => {
             src='https://cdn.builder.io/api/v1/image/assets/TEMP/08f54b92331fc5a85540bd0af32415449c804e34f6f5b5e9e2cea634df90faec?apiKey=0929d7104d224209a140b81d7cb94450&'
             className='aspect-square object-contain object-center w-full overflow-hidden'
           />
-        </div> */}
-      {/* </div> */}
+        </div>
+      </div> */}
     </div>
   );
 };
