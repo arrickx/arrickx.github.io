@@ -4,21 +4,21 @@ const newApp = () => {
     <div className='font-outfit justify-end items-center bg-stone-950 flex flex-col px-20 py-12 max-md:px-5'>
       <div className='w-full max-w-[1564px] mt-56 max-md:max-w-full max-md:mt-10'>
         <div className='gap-5 flex max-md:flex-col max-md:items-center max-md:gap-0'>
-          <div className='flex flex-col items-stretch w-[55%] mt-[15%] max-md:w-full max-md:ml-0  max-md:order-2'>
+          <div className='flex flex-col items-stretch w-[55%] mt-[25%] max-md:w-full max-md:ml-0 max-md:mt-8 max-md:order-2'>
             <div className='justify-center items-stretch flex flex-col'>
-              <div className='text-white text-left font-bold text-5xl tracking-wider leading-[80px] max-xl:text-4xl max-md:text-3xl max-md:leading-10  max-md:text-center'>
+              <div className='text-white text-left font-bold text-5xl tracking-widest leading-[80px] max-xl:text-4xl max-md:text-3xl max-md:leading-10  max-md:text-center'>
                 RICHTER LAU
               </div>
-              <div className='text-zinc-400 text-left text-3xl font-bold leading-15 max-xl:text-2xl max-md:text-xl max-md:text-center'>
+              <div className='text-zinc-400 text-left text-3xl leading-15 max-xl:text-2xl max-md:text-xl max-md:text-center'>
                 In the code flow, building impossible.
               </div>
             </div>
           </div>
-          <div className='flex flex-col items-stretch w-[45%] max-w-xl max-md:w-2/3 max-md:order1'>
+          <div className='flex flex-col items-stretch w-[45%] max-w-xl max-md:w-full max-md:max-w-[280px] max-md:order1'>
             <img
               loading='lazy'
               src={hero}
-              className='object-contain object-center w-full max-md:mt-50'
+              className='w-full max-md:mt-50 rounded-[50px] object-cover'
             />
           </div>
         </div>
