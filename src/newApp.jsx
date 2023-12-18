@@ -1,9 +1,23 @@
+import figmaLogo from './assets/figma.png';
+import gitLogo from './assets/git.png';
+import graphqlLogo from './assets/graphql.png';
+import jestLogo from './assets/jest.png';
+import jsLogo from './assets/js.png';
+import mongoLogo from './assets/mongodb.png';
+import nodeLogo from './assets/nodejs.png';
+import openaiLogo from './assets/openai.png';
 import hero from './assets/owl.jpeg';
+import psqlLogo from './assets/psql.png';
+import reactLogo from './assets/react.png';
+import reduxLogo from './assets/redux.png';
+import tsLogo from './assets/ts.png';
+import './index.css';
+
 const newApp = () => {
   return (
     <div className='font-outfit justify-end items-center bg-stone-950 flex flex-col px-20 py-12 max-md:px-5'>
       {/* hero */}
-      <div className='w-full max-w-[1564px] mt-14 max-md:max-w-full max-md:mt-10'>
+      <div className='w-full max-w-[1440px] mt-14 max-md:max-w-full max-md:mt-10'>
         <div className='gap-5 flex max-md:flex-col max-md:items-center max-md:gap-0'>
           <div className='flex flex-col items-stretch w-[55%] mt-[25%] max-md:w-full max-md:ml-0 max-md:mt-8 max-md:order-2'>
             <div className='justify-center items-stretch flex flex-col'>
@@ -19,176 +33,85 @@ const newApp = () => {
             <img
               loading='lazy'
               src={hero}
-              className='w-full max-md:mt-50 rounded-[50px] object-cover'
+              className='w-full max-md:mt-50 rounded-[50px] '
             />
           </div>
         </div>
       </div>
       {/* skills */}
-      <div className='text-orange-300 text-center text-xl font-bold tracking-wider uppercase mt-72 max-md:max-w-full  max-lg:text-lg max-md:mt-48'>
-        what products made of
-      </div>
-      <div className='text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap mt-2.5'>
-        skills
-      </div>
-      <div className='text-zinc-400 text-center text-xl tracking-wide mt-2.5  max-lg:text-base'>
-        front-end , back-end and another-end
-      </div>
+      <div className='text-head'>what products made of</div>
+      <div className='text-title'>skills</div>
+      <div className='text-subtitle'>front-end , back-end and another-end</div>
       {/* icons */}
-      {/* <div className='w-full max-w-[1440px] mt-52 max-md:max-w-full max-md:mt-10'>
-        <div className='gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0'>
-          <div className='flex flex-col items-stretch w-[36%] max-md:w-full max-md:ml-0'>
-            <div className='items-center flex flex-col px-0.5 max-md:mt-10'>
-              <div className='self-stretch flex items-stretch justify-between gap-5'>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch py-px rounded-[29.158px]'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[161px] h-[161px] px-10 rounded-[29.158px] border-[0.911px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/97fd76182d5832ebab97287f88cafcf8fd46d85fe43bbf147f0ccde708b22da0?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.9] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch px-px rounded-[29.158px]'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-16 rounded-[29.158px] border-[0.911px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/8b14d207cad4566c2a41942f4cbd0ccf12c26558ddb0309dab367c1f7a7d1790?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.44] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
+      <div className='w-full max-w-[1440px] mt-40 max-md:max-w-full max-xl:mt-20'>
+        <div className='flex justify-center md:gap-10 lg:gap-18 xl:gap-32 max-md:flex-col max-md:items-stretch'>
+          <div className='icon-set max-md:order-2'>
+            <div className='icon-row'>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={nodeLogo} />
               </div>
-              <div className='self-stretch flex items-stretch justify-between gap-5 mt-10'>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-[29.158px]'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[161px] h-[161px] px-9 rounded-[29.158px] border-[0.911px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/b67d2d969db0aa8ca44aa2b24e8169e8d6a53a180720353b711030d6dd63af65?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.98] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-[29.158px]'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-10 rounded-[29.158px] border-[0.911px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/f4a586e91f9ef2283d38484381b8d737f74edd68a805876d30d8c783039b24d8?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.9] object-contain object-center w-full fill-pink-500 overflow-hidden'
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide whitespace-nowrap mt-10'>
-                back-end
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={mongoLogo} className='p-2.5' />
               </div>
             </div>
+            <div className='icon-row'>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={psqlLogo} />
+              </div>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={graphqlLogo} />
+              </div>
+            </div>
+            <div className='text-subtitle icon-title'>back-end</div>
           </div>
-          <div className='flex flex-col items-stretch w-[36%] ml-5 max-md:w-full max-md:ml-0'>
-            <div className='items-center flex grow flex-col px-px max-md:mt-10'>
-              <div className='self-stretch flex items-stretch justify-between gap-5'>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-10 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/4cb1e9efb4612e27a385e3bd25676b222cd52ddd4fe338b6e7cce8d38fa79a93?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.94] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-9 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/6a41aeda0b7ea51f9d0868964fb6adecf563dacde5b95a05137af804c7109af9?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-square object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
+
+          <div className='icon-set max-md:order-1'>
+            <div className='icon-row'>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={reactLogo} />
               </div>
-              <div className='self-stretch flex items-stretch justify-between gap-5 mt-10'>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[161px] h-[161px] px-9 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/b6c598ea296c166896ac43b69791ca1e7f55c8294d293a7374592b9c8593064d?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[1.05] object-contain object-center w-full fill-purple-700 overflow-hidden'
-                    />
-                  </div>
-                </div>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch px-px rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[161px] h-[161px] px-9 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/36bf3df429617a87635d313542c21f2e47fae4224f50dd362f3650875e8e50d3?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[1.01] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide whitespace-nowrap mt-10'>
-                front-end
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={jsLogo} />
               </div>
             </div>
+            <div className='icon-row'>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={reduxLogo} />
+              </div>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={tsLogo} />
+              </div>
+            </div>
+            <div className='text-subtitle icon-title'>front-end</div>
           </div>
-          <div className='flex flex-col items-stretch w-[28%] ml-5 max-md:w-full max-md:ml-0'>
-            <div className='items-center flex grow flex-col px-px max-md:mt-10'>
-              <div className='self-stretch flex items-stretch justify-between gap-5'>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-9 rounded-3xl border-[0.87px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/68b42530b638e2c9897293f973bd4d4a3067cc6fa16913d07b56b1f171270e58?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.98] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-12 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/811de90fae7f6842ff4a1bf84a6474758e6072ff68e43b56c1303c80ee24d4d2?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.67] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
+
+          <div className='icon-set max-md:order-3'>
+            <div className='icon-row'>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={openaiLogo} />
               </div>
-              <div className='self-stretch flex items-stretch justify-between gap-5 mt-10'>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch px-px rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[161px] h-[161px] px-9 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/23bb89cc491faf99cd17d3911300149ccc9ad84ad90bde9120798a44bd9d7cad?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[1.01] object-contain object-center w-full fill-red-500 overflow-hidden'
-                    />
-                  </div>
-                </div>
-                <div className='flex grow basis-[0%] flex-col justify-center items-stretch rounded-3xl'>
-                  <div className='shadow-2xl bg-zinc-900 flex flex-col justify-center items-center w-[162px] h-[162px] px-10 rounded-3xl border-[0.898px] border-solid border-black max-md:px-5'>
-                    <img
-                      loading='lazy'
-                      src='https://cdn.builder.io/api/v1/image/assets/TEMP/9398019d784f4126273e5adcdec0ec61544ae91a90acbe9f3f334e6b6bc1bee2?apiKey=0929d7104d224209a140b81d7cb94450&'
-                      className='aspect-[0.92] object-contain object-center w-full overflow-hidden'
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide whitespace-nowrap mt-10'>
-                testings & tools
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={figmaLogo} className='p-1.5' />
               </div>
             </div>
+            <div className='icon-row'>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={gitLogo} />
+              </div>
+              <div className='icon-px bg-zinc-900'>
+                <img loading='lazy' src={jestLogo} />
+              </div>
+            </div>
+            <div className='text-subtitle icon-title'>testings & tools</div>
           </div>
         </div>
-      </div> */}
-      {/* <div className='text-orange-300 text-center text-2xl font-bold leading-7 tracking-wide uppercase whitespace-nowrap mt-80 max-md:mt-10'>
-        the History of Innovation
       </div>
-      <div className='text-white text-center text-5xl font-bold leading-[50.6px] tracking-wider whitespace-nowrap mt-4 max-md:text-4xl'>
-        experiences
-      </div>
-      <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide whitespace-nowrap mt-8 max-md:max-w-full'>
-        traditional, non-tranditional
-      </div>
+
+      {/* experiences */}
+      <div className='text-head'>the History of Innovation</div>
+      <div className='text-title'>experiences</div>
+      <div className='text-subtitle'>traditional, non-tranditional</div>
+      {/* 
       <div className='w-full max-w-[1650px] mt-52 max-md:max-w-full max-md:mt-10'>
         <div className='gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0'>
           <div className='flex flex-col items-stretch w-[55%] max-md:w-full max-md:ml-0'>
