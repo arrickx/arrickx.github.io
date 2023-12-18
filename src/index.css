@@ -4,7 +4,7 @@
 
 @layer components {
   .icon-set {
-    @apply justify-center
+    @apply justify-center;
   }
   .icon-row {
     @apply self-stretch flex items-stretch justify-center mt-5 gap-5
@@ -16,19 +16,30 @@
     max-lg:w-[100px] max-lg:h-[100px] max-lg:px-7
     max-md:w-[110px] max-md:h-[110px] max-md:px-7;
   }
+  .section-break {
+    @apply mt-48;
+  }
+  .section-wrap {
+    @apply w-full max-w-[1440px] mt-40 
+    max-md:max-w-full max-md:flex-col max-md:items-stretch
+    max-xl:mt-20 flex justify-center 
+    md:gap-10 
+    lg:gap-16 
+    xl:gap-28;
+  }
   .text-head {
-    @apply text-orange-300 text-center text-xl font-bold tracking-wider uppercase mt-72 
-    max-md:max-w-full max-md:mt-48
+    @apply text-orange-300 text-center text-xl font-bold tracking-wider uppercase 
+    max-md:max-w-full
     max-lg:text-lg;
   }
   .text-title {
-    @apply text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap ;
+    @apply text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
   }
   .text-subtitle {
     @apply text-zinc-400 text-center text-xl tracking-wide 
     max-lg:text-base;
   }
   .icon-title {
-    @apply mt-4 mb-20
+    @apply mt-4 mb-20;
   }
 }
