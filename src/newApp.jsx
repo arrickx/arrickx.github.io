@@ -1,16 +1,4 @@
-import figmaLogo from './assets/figma.png';
-import gitLogo from './assets/git.png';
-import graphqlLogo from './assets/graphql.png';
-import jestLogo from './assets/jest.png';
-import jsLogo from './assets/js.png';
-import mongoLogo from './assets/mongodb.png';
-import nodeLogo from './assets/nodejs.png';
-import openaiLogo from './assets/openai.png';
-import hero from './assets/owl.jpeg';
-import psqlLogo from './assets/psql.png';
-import reactLogo from './assets/react.png';
-import reduxLogo from './assets/redux.png';
-import tsLogo from './assets/ts.png';
+import * as img from './assets/index.js';
 import './index.css';
 
 const newApp = () => {
@@ -32,7 +20,7 @@ const newApp = () => {
           <div className='flex flex-col items-stretch w-[45%] max-w-xl max-md:w-full max-md:max-w-[280px] max-md:order1'>
             <img
               loading='lazy'
-              src={hero}
+              src={img.hero}
               className='w-full max-md:mt-50 rounded-[50px] '
             />
           </div>
@@ -48,18 +36,18 @@ const newApp = () => {
           <div className='icon-set max-md:order-2'>
             <div className='icon-row'>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={nodeLogo} />
+                <img loading='lazy' src={img.nodeLogo} />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={mongoLogo} className='p-2.5' />
+                <img loading='lazy' src={img.mongoLogo} className='p-2.5' />
               </div>
             </div>
             <div className='icon-row'>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={psqlLogo} />
+                <img loading='lazy' src={img.psqlLogo} />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={graphqlLogo} />
+                <img loading='lazy' src={img.graphqlLogo} />
               </div>
             </div>
             <div className='text-subtitle icon-title'>back-end</div>
@@ -68,18 +56,18 @@ const newApp = () => {
           <div className='icon-set max-md:order-1'>
             <div className='icon-row'>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={reactLogo} />
+                <img loading='lazy' src={img.reactLogo} />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={jsLogo} />
+                <img loading='lazy' src={img.jsLogo} />
               </div>
             </div>
             <div className='icon-row'>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={reduxLogo} />
+                <img loading='lazy' src={img.reduxLogo} />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={tsLogo} />
+                <img loading='lazy' src={img.tsLogo} />
               </div>
             </div>
             <div className='text-subtitle icon-title'>front-end</div>
@@ -88,18 +76,18 @@ const newApp = () => {
           <div className='icon-set max-md:order-3'>
             <div className='icon-row'>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={openaiLogo} />
+                <img loading='lazy' src={img.openaiLogo} />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={figmaLogo} className='p-1.5' />
+                <img loading='lazy' src={img.figmaLogo} className='p-1.5' />
               </div>
             </div>
             <div className='icon-row'>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={gitLogo} />
+                <img loading='lazy' src={img.gitLogo} />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={jestLogo} />
+                <img loading='lazy' src={img.jestLogo} />
               </div>
             </div>
             <div className='text-subtitle icon-title'>testings & tools</div>

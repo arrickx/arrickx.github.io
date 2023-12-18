@@ -8,7 +8,7 @@
   }
   .icon-row {
     @apply self-stretch flex items-stretch justify-center mt-5 gap-5
-    max-lg:mt-3 max-lg:gap-3;
+    max-lg:mt-4 max-lg:gap-4;
   }
   .icon-px {
     @apply flex flex-col justify-center items-center w-[140px] h-[140px] px-9 rounded-[30px] 
