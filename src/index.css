@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+li {
+  padding-top: 5px;
+}
+
 @layer components {
-  .icon-set {
-    @apply justify-center;
-  }
   .icon-row {
     @apply self-stretch flex items-stretch justify-center mt-5 gap-5
     max-lg:mt-4 max-lg:gap-4;
@@ -27,6 +28,10 @@
     lg:gap-16 
     xl:gap-28;
   }
+  .section-column {
+    @apply self-start gap-3 max-w-sm
+    max-md:self-center;
+  }
   .text-head {
     @apply text-orange-300 text-center text-xl font-bold tracking-wider uppercase 
     max-md:max-w-full
@@ -35,9 +40,17 @@
   .text-title {
     @apply text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
   }
+  .text-title2 {
+    @apply text-white text-center text-2xl font-bold tracking-wider whitespace-nowrap;
+  }
   .text-subtitle {
     @apply text-zinc-400 text-center text-xl tracking-wide 
     max-lg:text-base;
+  }
+  .text-desc {
+    @apply text-zinc-400 text-left text-xl tracking-wide list-disc ml-6
+    max-lg:text-base
+    max-md:w-[280px];
   }
   .icon-title {
     @apply mt-4 mb-20;

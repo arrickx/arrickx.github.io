@@ -32,8 +32,7 @@ const newApp = () => {
       <p className='text-subtitle'>front-end , back-end and another-end</p>
       {/* icons */}
       <section className='section-wrap'>
-        {/* <div className=''> */}
-        <section className='icon-set max-md:order-2'>
+        <section className=' max-md:order-2'>
           <div className='icon-row'>
             <div className='icon-px bg-zinc-900'>
               <img loading='lazy' src={img.nodeLogo} />
@@ -53,7 +52,7 @@ const newApp = () => {
           <p className='text-subtitle icon-title'>back-end</p>
         </section>
 
-        <section className='icon-set max-md:order-1'>
+        <section className='max-md:order-1'>
           <div className='icon-row'>
             <div className='icon-px bg-zinc-900'>
               <img loading='lazy' src={img.reactLogo} />
@@ -73,7 +72,7 @@ const newApp = () => {
           <p className='text-subtitle icon-title'>front-end</p>
         </section>
 
-        <section className='icon-set max-md:order-3'>
+        <section className='max-md:order-3'>
           <div className='icon-row'>
             <div className='icon-px bg-zinc-900'>
               <img loading='lazy' src={img.openaiLogo} />
@@ -90,9 +89,7 @@ const newApp = () => {
               <img loading='lazy' src={img.jestLogo} />
             </div>
           </div>
-          <p className='text-subtitle icon-title'>
-            testings & tools
-          </p>
+          <p className='text-subtitle icon-title'>testings & tools</p>
         </section>
       </section>
 
@@ -101,110 +98,71 @@ const newApp = () => {
       <p className='text-title'>experiences</p>
       <p className='text-subtitle'>traditional, non-tranditional</p>
       <div className='section-wrap'>
-        <div className='icon-set'>
+        <div className='section-column'>
           <p className='text-head'>IMAGINEXT</p>
-          <p className='text-title'>Software Engineer</p>
+          <p className='text-title2'>Software Engineer</p>
           <p className='text-subtitle'>2022 - Present</p>
+          <ul className='text-desc'>
+            <li>
+              Leveraged Next.js and Node.js for a seamless, interactive
+              debugging experience.
+            </li>
+            <li>
+              Published an npm package for effortless integration and community
+              collaboration.
+            </li>
+            <li>
+              Implemented TypeScript for smoother onboarding, simpler
+              dependencies, and streamlined maintenance.
+            </li>
+            <li>
+              Built visualization tools (D3 &amp; AST parser) for clear
+              navigation and understanding of complex Next.js applications.
+            </li>
+            <li>
+              Crafted robust E2E tests with Cypress to ensure app stability and
+              rapid issue resolution.
+            </li>
+            <li>
+              Product developed under tech accelerator with OS Labs
+              (opensourcelabs.io).
+            </li>
+          </ul>
         </div>
-        <div className='icon-set'>
+        <div className='section-column'>
           <p className='text-head'>CHINA MERCHANTS BANK</p>
-          <p className='text-title'>Credit Risk Associate</p>
+          <p className='text-title2'>Credit Risk Associate</p>
           <p className='text-subtitle'>2016 - Present</p>
+          <ul className='text-desc'>
+            <li>
+              Developed and integrated 100% of fair market value models,
+              seamlessly integrated with third-party APIs.
+            </li>
+            <li>
+              Optimized VBA scripts and custom algorithms for monitoring FX
+              rates, enforcing internal policies.
+            </li>
+            <li>
+              Achieved 80% faster processing while ensuring compliance with
+              profit &amp; loss limits.
+            </li>
+            <li>
+              Automated file transfers and folder creation with Batch Scripts,
+              saving over an hour per week in productivity.
+            </li>
+            <li>
+              Designed and maintained monthly transaction reports using SQL
+              databases, guaranteeing reliable summary statistics
+            </li>
+          </ul>
         </div>
       </div>
+
+      {/* projects */}
+      <p className='text-head'>From zero to pixels</p>
+      <p className='text-title'>projects</p>
+      <p className='text-subtitle'>code caffeine, code brew</p>
       {/* 
-      <div className='w-full max-w-[1650px] mt-52 max-md:max-w-full max-md:mt-10'>
-        <div className='gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0'>
-          <div className='flex flex-col items-stretch w-[55%] max-md:w-full max-md:ml-0'>
-            <div className='items-center flex flex-col max-md:max-w-full max-md:mt-10'>
-              <div className='text-orange-300 text-2xl font-bold leading-7 tracking-wide uppercase self-center whitespace-nowrap'>
-                IMAGINEXT{' '}
-              </div>
-              <div className='text-white text-4xl font-bold leading-10 tracking-wider self-center whitespace-nowrap mt-4'>
-                Software Engineer{' '}
-              </div>
-              <div className='text-zinc-400 text-3xl font-bold leading-8 tracking-wide self-center whitespace-nowrap mt-6'>
-                2022 - Present
-              </div>
-              <div className='text-zinc-400 text-3xl font-bold leading-8 tracking-wide self-stretch mt-12 max-md:max-w-full max-md:mt-10'>
-                <ul>
-                  <li>
-                    Leveraged Next.js and Node.js for a seamless, interactive
-                    debugging experience.
-                  </li>
-                  <li>
-                    Published an npm package for effortless integration and
-                    community collaboration.
-                  </li>
-                  <li>
-                    Implemented TypeScript for smoother onboarding, simpler
-                    dependencies, and streamlined maintenance.
-                  </li>
-                  <li>
-                    Built visualization tools (D3 &amp; AST parser) for clear
-                    navigation and understanding of complex Next.js
-                    applications.
-                  </li>
-                  <li>
-                    Crafted robust E2E tests with Cypress to ensure app
-                    stability and rapid issue resolution.
-                  </li>
-                  <li>
-                    Product developed under tech accelerator with OS Labs
-                    (opensourcelabs.io).
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-col items-stretch w-[45%] ml-5 max-md:w-full max-md:ml-0'>
-            <div className='items-center flex grow flex-col max-md:max-w-full max-md:mt-10'>
-              <div className='text-orange-300 text-2xl font-bold leading-7 tracking-wide uppercase self-center whitespace-nowrap'>
-                China Merchants Bank
-              </div>
-              <div className='text-white text-4xl font-bold leading-10 tracking-wider self-center whitespace-nowrap mt-4'>
-                Credit Risk Associate{' '}
-              </div>
-              <div className='text-zinc-400 text-3xl font-bold leading-8 tracking-wide self-center whitespace-nowrap mt-8'>
-                2016 - Present
-              </div>
-              <div className='text-zinc-400 text-3xl font-bold leading-8 tracking-wide self-stretch mt-12 max-md:max-w-full max-md:mt-10'>
-                <ul>
-                  <li>
-                    Developed and integrated 100% of fair market value models,
-                    seamlessly integrated with third-party APIs.
-                  </li>
-                  <li>
-                    Optimized VBA scripts and custom algorithms for monitoring
-                    FX rates, enforcing internal policies.
-                  </li>
-                  <li>
-                    Achieved 80% faster processing while ensuring compliance
-                    with profit &amp; loss limits.
-                  </li>
-                  <li>
-                    Automated file transfers and folder creation with Batch
-                    Scripts, saving over an hour per week in productivity.
-                  </li>
-                  <li>
-                    Designed and maintained monthly transaction reports using
-                    SQL databases, guaranteeing reliable summary statistics
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className='text-orange-300 text-center text-2xl font-bold leading-7 tracking-wide uppercase whitespace-nowrap mt-80 max-md:mt-10'>
-        From zero to pixels
-      </div>
-      <div className='text-white text-center text-5xl font-bold leading-[50.6px] tracking-wider whitespace-nowrap mt-4 max-md:text-4xl'>
-        projects
-      </div>
-      <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide whitespace-nowrap mt-8'>
-        code caffeine, code brew
-      </div>
       <div className='items-stretch flex w-full max-w-[1428px] justify-between gap-5 mt-52 max-md:max-w-full max-md:flex-wrap max-md:mt-10'>
         <div className='items-center flex flex-col max-md:max-w-full'>
           <div className='text-white text-4xl font-bold leading-10 tracking-wider self-center whitespace-nowrap'>
