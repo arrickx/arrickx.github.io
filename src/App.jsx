@@ -1,4 +1,6 @@
 import * as img from './assets/index.js';
+import SectionHeading from './components/SectionHeading.jsx';
+import * as data from './constants/index.js';
 import './index.css';
 
 function App() {
@@ -29,9 +31,11 @@ function App() {
           </div>
         </header>
         {/* skills */}
-        <p className='text-head'>what products made of</p>
-        <p className='text-title'>skills</p>
-        <p className='text-subtitle'>front-end , back-end and another-end</p>
+        <SectionHeading
+          heading={data.skills.heading}
+          title='skills'
+          subtitle='front-end, back-end, and another-end'
+        />
         {/* icons */}
         <section className='section-wrap'>
           <section className=' max-md:order-2'>
@@ -40,7 +44,12 @@ function App() {
                 <img loading='lazy' src={img.nodeLogo} alt='Node.js Logo' />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.mongoLogo} alt='MongoDB Logo' className='p-2.5' />
+                <img
+                  loading='lazy'
+                  src={img.mongoLogo}
+                  alt='MongoDB Logo'
+                  className='p-2.5'
+                />
               </div>
             </div>
             <div className='icon-row'>
@@ -80,7 +89,12 @@ function App() {
                 <img loading='lazy' src={img.openaiLogo} alt='OpenAI Logo' />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.figmaLogo} alt='Figma Logo' className='p-1.5' />
+                <img
+                  loading='lazy'
+                  src={img.figmaLogo}
+                  alt='Figma Logo'
+                  className='p-1.5'
+                />
               </div>
             </div>
             <div className='icon-row'>
@@ -96,9 +110,11 @@ function App() {
         </section>
 
         {/* experiences */}
-        <p className='text-head'>the History of Innovation</p>
-        <p className='text-title'>experiences</p>
-        <p className='text-subtitle'>traditional, non-tranditional</p>
+        <SectionHeading
+          heading={data.experiences.heading}
+          title={data.experiences.title}
+          subtitle={data.experiences.subtitle}
+        />
         <section className='section-wrap'>
           <div className='section-column'>
             <p className='text-head'>IMAGINEXT</p>
@@ -161,9 +177,11 @@ function App() {
         </section>
 
         {/* projects */}
-        <p className='text-head'>From zero to pixels</p>
-        <p className='text-title'>projects</p>
-        <p className='text-subtitle'>code caffeine, code brew</p>
+        <SectionHeading
+          heading={data.projects.heading}
+          title={data.projects.title}
+          subtitle={data.projects.subtitle}
+        />
 
         <section className='section-wrap'>
           <div className='section-column '>
@@ -173,7 +191,12 @@ function App() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <img loading='lazy' src={img.gptLogo} alt='GPT Logo' className='project-img' />
+              <img
+                loading='lazy'
+                src={img.gptLogo}
+                alt='GPT Logo'
+                className='project-img'
+              />
             </a>
             <p className='project-desc'>
               This project demonstrates various functionalities of the OpenAI
