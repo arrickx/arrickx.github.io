@@ -61,7 +61,7 @@ li {
     max-md:w-[230px];
   }
   .project-desc {
-    @apply text-zinc-400 text-center text-xl tracking-wide list-disc
+    @apply text-zinc-400 text-left text-xl tracking-wide ml-8 mt-3
     max-lg:text-base
     max-md:w-[280px];
   }

@@ -214,7 +214,7 @@ function App() {
           <p className='text-lg md:text-xl lg:text-2xl text-accent'>
             Always coding, always learning.
           </p>
-          <div className='flex flex-row justify-center gap-5'>
+          <div className='flex flex-row justify-center gap-5 mt-5'>
             <a
               className='footer-icon bg-zinc-900'
               href='https://github.com/arrickx'
