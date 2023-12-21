@@ -33,26 +33,41 @@ li {
     max-md:self-center;
   }
   .text-head {
-    @apply text-orange-300 text-center text-xl font-bold tracking-wider uppercase 
+    @apply text-accent text-center text-xl font-bold tracking-wider uppercase 
     max-md:max-w-full
-    max-lg:text-lg;
+    max-xl:text-base;
   }
   .text-title {
     @apply text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
   }
   .text-title2 {
-    @apply text-white text-center text-2xl font-bold tracking-wider whitespace-nowrap;
+    @apply text-white text-center text-2xl font-bold tracking-wider;
   }
   .text-subtitle {
     @apply text-zinc-400 text-center text-xl tracking-wide 
     max-lg:text-base;
   }
   .text-desc {
-    @apply text-zinc-400 text-left text-xl tracking-wide list-disc ml-6
+    @apply text-zinc-400 text-left text-xl tracking-wide list-disc ml-8
     max-lg:text-base
     max-md:w-[280px];
   }
   .icon-title {
     @apply mt-4 mb-20;
+  }
+  .project-img {
+    @apply max-w-[300px] rounded-[50px] mx-auto
+    max-xl:w-[250px]
+    max-md:w-[230px];
+  }
+  .project-desc {
+    @apply text-zinc-400 text-center text-xl tracking-wide list-disc
+    max-lg:text-base
+    max-md:w-[280px];
+  }
+  .footer-icon {
+    @apply w-[50px] h-[50px] rounded-full p-2
+    max-xl:w-[50x] max-xl:h-[50px] 
+    max-lg:w-[40px] max-lg:h-[40px] ;
   }
 }

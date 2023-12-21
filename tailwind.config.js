@@ -8,6 +8,11 @@ export default {
       fontFamily: {
         outfit: ['"Outfit"', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        accent: '#E49877',
+      },
     },
   },
   plugins: [],

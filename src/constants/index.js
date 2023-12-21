@@ -1,3 +1,7 @@
+const email = 'richterxlau@gmail.com';
+const subject = 'Reaching out from [Company Name]';
+const body =
+  "Hi Richter,\n\nThis is [Name] from [Company Name]. Are you interested in learning more about potential roles at our company? I'd be happy to share some information and answer any questions you have.\n\nBest,\n[Name]";
 const experiences = [
   {
     title: 'Software Engineer',

@@ -12,7 +12,7 @@ const newApp = () => {
               <h1 className='text-white text-left font-bold text-5xl tracking-widest leading-[80px] max-xl:text-4xl max-md:text-3xl max-md:leading-10  max-md:text-center'>
                 RICHTER LAU
               </h1>
-              <p className='text-zinc-400 text-left text-3xl leading-15 max-xl:text-2xl max-md:text-xl max-md:text-center'>
+              <p className='text-zinc-400 text-left text-3xl leading-15 max-xl:text-2xl max-lg:text-xl max-md:text-center'>
                 In the code flow, building impossible.
               </p>
             </div>
@@ -97,7 +97,7 @@ const newApp = () => {
       <p className='text-head'>the History of Innovation</p>
       <p className='text-title'>experiences</p>
       <p className='text-subtitle'>traditional, non-tranditional</p>
-      <div className='section-wrap'>
+      <section className='section-wrap'>
         <div className='section-column'>
           <p className='text-head'>IMAGINEXT</p>
           <p className='text-title2'>Software Engineer</p>
@@ -156,75 +156,71 @@ const newApp = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
 
       {/* projects */}
       <p className='text-head'>From zero to pixels</p>
       <p className='text-title'>projects</p>
       <p className='text-subtitle'>code caffeine, code brew</p>
-      {/* 
-      <div className='items-stretch flex w-full max-w-[1428px] justify-between gap-5 mt-52 max-md:max-w-full max-md:flex-wrap max-md:mt-10'>
-        <div className='items-center flex flex-col max-md:max-w-full'>
-          <div className='text-white text-4xl font-bold leading-10 tracking-wider self-center whitespace-nowrap'>
-            OpenAI Exploration
-          </div>
+
+      <section className='section-wrap'>
+        <div className='section-column '>
+          <p className='text-title2'>OpenAI Exploration</p>
+          <img loading='lazy' src={img.gptLogo} className='project-img' />
+          <p className='project-desc'>
+            This project demonstrates various functionalities of the OpenAI
+            API,including chat, Document QA, function calling, and semantic
+            search.
+          </p>
+          <p className='project-desc text-accent'>
+            #openai #langchain #javascript
+          </p>
+        </div>
+
+        <div className='section-column'>
+          <p className='text-title2'>LastResort</p>
           <img
             loading='lazy'
-            srcSet='https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/30865825909407fc94221193f32a29d93b46b7bb8d43e6034cfd50de5435c550?apiKey=0929d7104d224209a140b81d7cb94450&'
-            className='aspect-square object-contain object-center w-[350px] overflow-hidden self-center max-w-full mt-8'
+            src={img.lastresortLogo}
+            className='project-img'
           />
-          <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide self-stretch mt-8 max-md:max-w-full'>
-            This project demonstrates various functionalities of the OpenAI API,
-            including chat, Document QA, function calling, and semantic search.
-          </div>
-          <div className='text-orange-300 text-3xl font-bold leading-8 tracking-wide max-w-[458px] self-center mt-8 max-md:max-w-full'>
-            #openai #langchain #javascript{' '}
-          </div>
+          <p className='project-desc'>
+            A website where anonymous micro-stories capture the fleeting essence
+            of daily life, inviting you to share, reflect, and connect.
+          </p>
+          <p className='project-desc text-accent'>#react #express #webpack</p>
         </div>
-        <div className='items-center flex flex-col px-20 max-md:max-w-full max-md:px-5'>
-          <div className='text-white text-4xl font-bold leading-10 tracking-wider self-center whitespace-nowrap'>
-            LastResort
-          </div>
-          <img
-            loading='lazy'
-            srcSet='https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/31f3f28425a035a5c6ec5201a1904acfe9b881810d31ea7700bcf1d4e969ca74?apiKey=0929d7104d224209a140b81d7cb94450&'
-            className='aspect-square object-contain object-center w-[350px] overflow-hidden self-center max-w-full mt-8'
-          />
-          <div className='text-zinc-400 text-center text-3xl font-bold leading-8 tracking-wide self-center max-w-xs mt-8'>
-            A website dedicated to fleeting and expressive moments of
-            self-sharing.
-          </div>
-          <div className='text-orange-300 text-3xl font-bold leading-8 tracking-wide self-stretch whitespace-nowrap mt-8 max-md:ml-2 max-md:mr-2'>
-            #react #express #webpack
-          </div>
+      </section>
+
+      <footer>
+        <p className='text-lg md:text-xl lg:text-2xl text-accent'>
+          Always coding, always learning.
+        </p>
+        <div className='flex flex-row justify-center gap-5'>
+          <a
+            className='footer-icon bg-zinc-900'
+            href='https://github.com/arrickx'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img loading='lazy' src={img.githubLogo} />
+          </a>
+          <a
+            className='footer-icon bg-zinc-900'
+            href='https://www.linkedin.com/in/richterlau/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img loading='lazy' src={img.linkedinLogo} />
+          </a>
+          <a
+            className='footer-icon bg-zinc-900'
+            href='mailto:richterxlau@gmail.com?subject=Reaching%20out%20from%20%5BCompany%20Name%5D&body=Hi%20Richter,%0D%0AThis%20is%20%5BName%5D%20from%20%5BCompany%20Name%5D.%20Are%20you%20interested%20in%20learning%20more%20about%20potential%20roles%20at%20our%20company%3F%20I%27d%20be%20happy%20to%20share%20some%20information%20and%20answer%20any%20questions%20you%20have.%0D%0ABest,%0D%0A%5BName%5D'
+          >
+            <img loading='lazy' src={img.emailLogo} />
+          </a>
         </div>
-      </div>
-      <div className='text-orange-300 text-center text-3xl font-bold leading-8 tracking-wide max-w-[456px] mt-52 max-md:max-w-full max-md:mt-10'>
-        Always coding, always learning.
-      </div>
-      <div className='items-stretch flex w-[340px] max-w-full justify-between gap-5 mt-12 mb-14 max-md:justify-center max-md:my-10'>
-        <div className='justify-center items-center bg-orange-300 bg-opacity-10 flex basis-[0%] flex-col h-20 flex-1 px-1.5 rounded-[200px]'>
-          <img
-            loading='lazy'
-            src='https://cdn.builder.io/api/v1/image/assets/TEMP/0629bd741b43d902c0929e02f9c6fb501ac4d891367772ee71872774cd76cd86?apiKey=0929d7104d224209a140b81d7cb94450&'
-            className='aspect-square object-contain object-center w-full overflow-hidden'
-          />
-        </div>
-        <div className='justify-center items-center bg-orange-300 bg-opacity-10 flex basis-[0%] flex-col h-20 flex-1 px-1.5 rounded-[200px]'>
-          <img
-            loading='lazy'
-            src='https://cdn.builder.io/api/v1/image/assets/TEMP/019f27cf233bef18bbbf328dda3bd2bbefd279c462f73ad120685d7bb255327c?apiKey=0929d7104d224209a140b81d7cb94450&'
-            className='aspect-square object-contain object-center w-full overflow-hidden'
-          />
-        </div>
-        <div className='justify-center items-center bg-orange-300 bg-opacity-10 flex basis-[0%] flex-col h-20 flex-1 px-1.5 rounded-[200px]'>
-          <img
-            loading='lazy'
-            src='https://cdn.builder.io/api/v1/image/assets/TEMP/08f54b92331fc5a85540bd0af32415449c804e34f6f5b5e9e2cea634df90faec?apiKey=0929d7104d224209a140b81d7cb94450&'
-            className='aspect-square object-contain object-center w-full overflow-hidden'
-          />
-        </div>
-      </div> */}
+      </footer>
     </div>
   );
 };
