@@ -1,5 +1,6 @@
 import * as img from './assets/index.js';
 import FooterIcon from './components/FooterIcon.jsx';
+import ProjectCard from './components/ProjectCard.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
 import * as data from './constants/index.js';
 import './index.css';
@@ -185,53 +186,23 @@ function App() {
         />
 
         <section className='section-wrap'>
-          <div className='section-column '>
-            <p className='text-title2'>OpenAI Exploration</p>
-            <a
-              href='https://github.com/arrickx/openai-exploration'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img
-                loading='lazy'
-                src={img.gptLogo}
-                alt='GPT Logo'
-                className='project-img'
-              />
-            </a>
-            <p className='project-desc'>
-              This project demonstrates various functionalities of the OpenAI
-              API,including chat, Document QA, function calling, and semantic
-              search.
-            </p>
-            <p className='project-desc text-accent max-md:mb-16'>
-              #openai #langchain #javascript
-            </p>
-          </div>
+          <ProjectCard
+            title={data.projects.one.name}
+            href={data.projects.one.address}
+            src={data.projects.one.src}
+            alt={data.projects.one.alt}
+            description={data.projects.one.description}
+            tag={data.projects.one.tag}
+          />
 
-          <div className='section-column'>
-            <p className='text-title2'>LastResort</p>
-            <a
-              href='https://github.com/arrickx/lastResort'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img
-                loading='lazy'
-                src={img.lastresortLogo}
-                alt='LastResort Logo'
-                className='project-img'
-              />
-            </a>
-            <p className='project-desc'>
-              A website where anonymous micro-stories capture the fleeting
-              essence of daily life, inviting you to share, reflect, and
-              connect.
-            </p>
-            <p className='project-desc text-accent max-md:mb-16'>
-              #react #express #webpack
-            </p>
-          </div>
+          <ProjectCard
+            title={data.projects.two.name}
+            href={data.projects.two.address}
+            src={data.projects.two.src}
+            alt={data.projects.two.alt}
+            description={data.projects.two.description}
+            tag={data.projects.two.tag}
+          />
         </section>
 
         <footer className='max-md:-mt-24'>
