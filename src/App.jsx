@@ -1,4 +1,5 @@
 import * as img from './assets/index.js';
+import ExperienceCard from './components/ExperienceCard.jsx';
 import FooterIcon from './components/FooterIcon.jsx';
 import ProjectCard from './components/ProjectCard.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
@@ -118,64 +119,18 @@ function App() {
           subtitle={data.experiences.subtitle}
         />
         <section className='section-wrap'>
-          <div className='section-column'>
-            <p className='text-head'>IMAGINEXT</p>
-            <p className='text-title2'>Software Engineer</p>
-            <p className='text-subtitle'>2022 - Present</p>
-            <ul className='text-desc'>
-              <li>
-                Leveraged Next.js and Node.js for a seamless, interactive
-                debugging experience.
-              </li>
-              <li>
-                Published an npm package for effortless integration and
-                community collaboration.
-              </li>
-              <li>
-                Implemented TypeScript for smoother onboarding, simpler
-                dependencies, and streamlined maintenance.
-              </li>
-              <li>
-                Built visualization tools (D3 &amp; AST parser) for clear
-                navigation and understanding of complex Next.js applications.
-              </li>
-              <li>
-                Crafted robust E2E tests with Cypress to ensure app stability
-                and rapid issue resolution.
-              </li>
-              <li>
-                Product developed under tech accelerator with OS Labs
-                (opensourcelabs.io).
-              </li>
-            </ul>
-          </div>
-          <div className='section-column'>
-            <p className='text-head'>CHINA MERCHANTS BANK</p>
-            <p className='text-title2'>Credit Risk Associate</p>
-            <p className='text-subtitle'>2016 - Present</p>
-            <ul className='text-desc'>
-              <li>
-                Developed and integrated 100% of fair market value models,
-                seamlessly integrated with third-party APIs.
-              </li>
-              <li>
-                Optimized VBA scripts and custom algorithms for monitoring FX
-                rates, enforcing internal policies.
-              </li>
-              <li>
-                Achieved 80% faster processing while ensuring compliance with
-                profit &amp; loss limits.
-              </li>
-              <li>
-                Automated file transfers and folder creation with Batch Scripts,
-                saving over an hour per week in productivity.
-              </li>
-              <li>
-                Designed and maintained monthly transaction reports using SQL
-                databases, guaranteeing reliable summary statistics
-              </li>
-            </ul>
-          </div>
+          <ExperienceCard
+            company={data.experiences.list[0].company_name}
+            title={data.experiences.list[0].title}
+            date={data.experiences.list[0].date}
+            details={data.experiences.list[0].details}
+          />
+          <ExperienceCard
+            company={data.experiences.list[1].company_name}
+            title={data.experiences.list[1].title}
+            date={data.experiences.list[1].date}
+            details={data.experiences.list[1].details}
+          />
         </section>
 
         {/* projects */}
@@ -205,6 +160,7 @@ function App() {
           />
         </section>
 
+        {/* footer */}
         <footer className='max-md:-mt-24'>
           <p className='text-lg md:text-xl lg:text-2xl text-accent'>
             Always coding, always learning.

@@ -3,14 +3,12 @@ export const experiences = {
   heading: 'the History of Innovation',
   title: 'experiences',
   subtitle: 'traditional, non-tranditional',
-  details: [
+  list: [
     {
       title: 'Software Engineer',
       company_name: 'IMAGINEXT',
-      icon: '',
-      iconBg: '#383E56',
       date: '2022 - Current',
-      points: [
+      details: [
         'Leveraged Next.js and Node.js for a seamless, interactive debugging experience.',
         'Published an npm package for effortless integration and community collaboration.',
         'Implemented TypeScript for smoother onboarding, simpler dependencies, and streamlined maintenance.',
@@ -22,10 +20,8 @@ export const experiences = {
     {
       title: 'Market Risk Associate',
       company_name: 'CHINA MERCHANTS BANK',
-      icon: '',
-      iconBg: '#383E56',
       date: '2016 - Current',
-      points: [
+      details: [
         'Developed and integrated 100% of fair market value models, seamlessly integrated with third-party APIs.',
         'Optimized VBA scripts and custom algorithms for monitoring FX rates, enforcing internal policies.',
         'Achieved 80% faster processing while ensuring compliance with profit & loss limits.',
