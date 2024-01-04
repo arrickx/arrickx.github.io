@@ -1,4 +1,9 @@
 import * as img from './assets/index.js';
+import ExperienceCard from './components/ExperienceCard.jsx';
+import FooterIcon from './components/FooterIcon.jsx';
+import ProjectCard from './components/ProjectCard.jsx';
+import SectionHeading from './components/SectionHeading.jsx';
+import * as data from './constants/index.js';
 import './index.css';
 
 function App() {
@@ -29,9 +34,11 @@ function App() {
           </div>
         </header>
         {/* skills */}
-        <p className='text-head'>what products made of</p>
-        <p className='text-title'>skills</p>
-        <p className='text-subtitle'>front-end , back-end and another-end</p>
+        <SectionHeading
+          heading={data.skills.heading}
+          title='skills'
+          subtitle='front-end, back-end, and another-end'
+        />
         {/* icons */}
         <section className='section-wrap'>
           <section className=' max-md:order-2'>
@@ -40,7 +47,12 @@ function App() {
                 <img loading='lazy' src={img.nodeLogo} alt='Node.js Logo' />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.mongoLogo} alt='MongoDB Logo' className='p-2.5' />
+                <img
+                  loading='lazy'
+                  src={img.mongoLogo}
+                  alt='MongoDB Logo'
+                  className='p-2.5'
+                />
               </div>
             </div>
             <div className='icon-row'>
@@ -80,7 +92,12 @@ function App() {
                 <img loading='lazy' src={img.openaiLogo} alt='OpenAI Logo' />
               </div>
               <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.figmaLogo} alt='Figma Logo' className='p-1.5' />
+                <img
+                  loading='lazy'
+                  src={img.figmaLogo}
+                  alt='Figma Logo'
+                  className='p-1.5'
+                />
               </div>
             </div>
             <div className='icon-row'>
@@ -96,148 +113,74 @@ function App() {
         </section>
 
         {/* experiences */}
-        <p className='text-head'>the History of Innovation</p>
-        <p className='text-title'>experiences</p>
-        <p className='text-subtitle'>traditional, non-tranditional</p>
+        <SectionHeading
+          heading={data.experiences.heading}
+          title={data.experiences.title}
+          subtitle={data.experiences.subtitle}
+        />
         <section className='section-wrap'>
-          <div className='section-column'>
-            <p className='text-head'>IMAGINEXT</p>
-            <p className='text-title2'>Software Engineer</p>
-            <p className='text-subtitle'>2022 - Present</p>
-            <ul className='text-desc'>
-              <li>
-                Leveraged Next.js and Node.js for a seamless, interactive
-                debugging experience.
-              </li>
-              <li>
-                Published an npm package for effortless integration and
-                community collaboration.
-              </li>
-              <li>
-                Implemented TypeScript for smoother onboarding, simpler
-                dependencies, and streamlined maintenance.
-              </li>
-              <li>
-                Built visualization tools (D3 &amp; AST parser) for clear
-                navigation and understanding of complex Next.js applications.
-              </li>
-              <li>
-                Crafted robust E2E tests with Cypress to ensure app stability
-                and rapid issue resolution.
-              </li>
-              <li>
-                Product developed under tech accelerator with OS Labs
-                (opensourcelabs.io).
-              </li>
-            </ul>
-          </div>
-          <div className='section-column'>
-            <p className='text-head'>CHINA MERCHANTS BANK</p>
-            <p className='text-title2'>Credit Risk Associate</p>
-            <p className='text-subtitle'>2016 - Present</p>
-            <ul className='text-desc'>
-              <li>
-                Developed and integrated 100% of fair market value models,
-                seamlessly integrated with third-party APIs.
-              </li>
-              <li>
-                Optimized VBA scripts and custom algorithms for monitoring FX
-                rates, enforcing internal policies.
-              </li>
-              <li>
-                Achieved 80% faster processing while ensuring compliance with
-                profit &amp; loss limits.
-              </li>
-              <li>
-                Automated file transfers and folder creation with Batch Scripts,
-                saving over an hour per week in productivity.
-              </li>
-              <li>
-                Designed and maintained monthly transaction reports using SQL
-                databases, guaranteeing reliable summary statistics
-              </li>
-            </ul>
-          </div>
+          <ExperienceCard
+            company={data.experiences.list[0].company_name}
+            title={data.experiences.list[0].title}
+            date={data.experiences.list[0].date}
+            details={data.experiences.list[0].details}
+          />
+          <ExperienceCard
+            company={data.experiences.list[1].company_name}
+            title={data.experiences.list[1].title}
+            date={data.experiences.list[1].date}
+            details={data.experiences.list[1].details}
+          />
         </section>
 
         {/* projects */}
-        <p className='text-head'>From zero to pixels</p>
-        <p className='text-title'>projects</p>
-        <p className='text-subtitle'>code caffeine, code brew</p>
+        <SectionHeading
+          heading={data.projects.heading}
+          title={data.projects.title}
+          subtitle={data.projects.subtitle}
+        />
 
         <section className='section-wrap'>
-          <div className='section-column '>
-            <p className='text-title2'>OpenAI Exploration</p>
-            <a
-              href='https://github.com/arrickx/openai-exploration'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.gptLogo} alt='GPT Logo' className='project-img' />
-            </a>
-            <p className='project-desc'>
-              This project demonstrates various functionalities of the OpenAI
-              API,including chat, Document QA, function calling, and semantic
-              search.
-            </p>
-            <p className='project-desc text-accent max-md:mb-16'>
-              #openai #langchain #javascript
-            </p>
-          </div>
+          <ProjectCard
+            title={data.projects.one.name}
+            href={data.projects.one.address}
+            src={data.projects.one.src}
+            alt={data.projects.one.alt}
+            description={data.projects.one.description}
+            tag={data.projects.one.tag}
+          />
 
-          <div className='section-column'>
-            <p className='text-title2'>LastResort</p>
-            <a
-              href='https://github.com/arrickx/lastResort'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img
-                loading='lazy'
-                src={img.lastresortLogo}
-                alt='LastResort Logo'
-                className='project-img'
-              />
-            </a>
-            <p className='project-desc'>
-              A website where anonymous micro-stories capture the fleeting
-              essence of daily life, inviting you to share, reflect, and
-              connect.
-            </p>
-            <p className='project-desc text-accent max-md:mb-16'>
-              #react #express #webpack
-            </p>
-          </div>
+          <ProjectCard
+            title={data.projects.two.name}
+            href={data.projects.two.address}
+            src={data.projects.two.src}
+            alt={data.projects.two.alt}
+            description={data.projects.two.description}
+            tag={data.projects.two.tag}
+          />
         </section>
 
+        {/* footer */}
         <footer className='max-md:-mt-24'>
           <p className='text-lg md:text-xl lg:text-2xl text-accent'>
             Always coding, always learning.
           </p>
           <div className='flex flex-row justify-center gap-5 mt-5'>
-            <a
-              className='footer-icon bg-zinc-900'
-              href='https://github.com/arrickx'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.githubLogo} alt='GitHub Logo' />
-            </a>
-            <a
-              className='footer-icon bg-zinc-900'
-              href='https://www.linkedin.com/in/richterlau/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.linkedinLogo} alt='LinkedIn Logo' />
-            </a>
-            <a
-              className='footer-icon bg-zinc-900'
-              href='mailto:richterxlau@gmail.com?subject=Reaching%20out%20from%20%5BCompany%20Name%5D&body=Hi%20Richter,%0D%0A%0D%0AThis%20is%20%5BName%5D%20from%20%5BCompany%20Name%5D.%20Are%20you%20interested%20in%20learning%20more%20about%20potential%20roles%20at%20our%20company%3F%20I%27d%20be%20happy%20to%20share%20some%20information%20and%20answer%20any%20questions%20you%20have.%0D%0A%0D%0ABest,%0D%0A%5BName%5D'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.emailLogo} alt='Email Logo' />
-            </a>
+            <FooterIcon
+              href={data.github.address}
+              src={data.github.src}
+              alt={data.github.alt}
+            />
+            <FooterIcon
+              href={data.linkedin.address}
+              src={data.linkedin.src}
+              alt={data.linkedin.alt}
+            />
+            <FooterIcon
+              href={data.email.address}
+              src={data.email.src}
+              alt={data.email.alt}
+            />
           </div>
         </footer>
       </div>
