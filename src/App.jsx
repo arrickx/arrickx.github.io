@@ -1,4 +1,5 @@
 import * as img from './assets/index.js';
+import FooterIcon from './components/FooterIcon.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
 import * as data from './constants/index.js';
 import './index.css';
@@ -238,29 +239,21 @@ function App() {
             Always coding, always learning.
           </p>
           <div className='flex flex-row justify-center gap-5 mt-5'>
-            <a
-              className='footer-icon bg-zinc-900'
-              href='https://github.com/arrickx'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.githubLogo} alt='GitHub Logo' />
-            </a>
-            <a
-              className='footer-icon bg-zinc-900'
-              href='https://www.linkedin.com/in/richterlau/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.linkedinLogo} alt='LinkedIn Logo' />
-            </a>
-            <a
-              className='footer-icon bg-zinc-900'
-              href='mailto:richterxlau@gmail.com?subject=Reaching%20out%20from%20%5BCompany%20Name%5D&body=Hi%20Richter,%0D%0A%0D%0AThis%20is%20%5BName%5D%20from%20%5BCompany%20Name%5D.%20Are%20you%20interested%20in%20learning%20more%20about%20potential%20roles%20at%20our%20company%3F%20I%27d%20be%20happy%20to%20share%20some%20information%20and%20answer%20any%20questions%20you%20have.%0D%0A%0D%0ABest,%0D%0A%5BName%5D'
-              rel='noopener noreferrer'
-            >
-              <img loading='lazy' src={img.emailLogo} alt='Email Logo' />
-            </a>
+            <FooterIcon
+              href={data.github.address}
+              src={data.github.src}
+              alt={data.github.alt}
+            />
+            <FooterIcon
+              href={data.linkedin.address}
+              src={data.linkedin.src}
+              alt={data.linkedin.alt}
+            />
+            <FooterIcon
+              href={data.email.address}
+              src={data.email.src}
+              alt={data.email.alt}
+            />
           </div>
         </footer>
       </div>

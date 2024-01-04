@@ -1,3 +1,4 @@
+import * as img from '../assets/index.js';
 export const experiences = {
   heading: 'the History of Innovation',
   title: 'experiences',
@@ -47,8 +48,20 @@ export const projects = {
   subtitle: 'code caffeine, code brew',
 };
 
+export const github = {
+  address: 'https://github.com/arrickx',
+  src: img.githubLogo,
+  alt: 'GitHub Logo',
+};
+
+export const linkedin = {
+  address: 'https://www.linkedin.com/in/richterlau/',
+  src: img.linkedinLogo,
+  alt: 'LinkedIn Logo',
+};
+
 export const email = {
-  address: 'richterxlau@gmail.com',
-  subject: 'Reaching out from [Company Name]',
-  body: "Hi Richter,\n\nThis is [Name] from [Company Name]. Are you interested in learning more about potential roles at our company? I'd be happy to share some information and answer any questions you have.\n\nBest,\n[Name]",
+  address: 'mailto:richterxlau@gmail.com?subject=Reaching%20out%20from%20%5BCompany%20Name%5D&body=Hi%20Richter,%0D%0A%0D%0AThis%20is%20%5BName%5D%20from%20%5BCompany%20Name%5D.%20Are%20you%20interested%20in%20learning%20more%20about%20potential%20roles%20at%20our%20company%3F%20I%27d%20be%20happy%20to%20share%20some%20information%20and%20answer%20any%20questions%20you%20have.%0D%0A%0D%0ABest,%0D%0A%5BName%5D',
+  src: img.emailLogo,
+  alt: 'Email Logo',
 };
