@@ -3,8 +3,7 @@ export const experiences = {
   heading: 'the History of Innovation',
   title: 'experiences',
   subtitle: 'traditional, non-tranditional',
-  list: [
-    {
+  one:{
       title: 'Software Engineer',
       company_name: 'IMAGINEXT',
       date: '2022 - Current',
@@ -17,7 +16,7 @@ export const experiences = {
         'Product developed under tech accelerator with OS Labs (opensourcelabs.io)',
       ],
     },
-    {
+    two:{
       title: 'Market Risk Associate',
       company_name: 'CHINA MERCHANTS BANK',
       date: '2016 - Current',
@@ -29,13 +28,39 @@ export const experiences = {
         'Designed and maintained monthly transaction reports using SQL databases, guaranteeing reliable summary statistics.',
       ],
     },
-  ],
 };
 
 export const skills = {
   heading: 'What products are made of',
   title: 'skills',
   subtitle: 'front-end, back-end, and another-end',
+  backend: {
+    title: 'back-end',
+    item: [
+      { src: img.nodeLogo, alt: 'Node.js Logo' },
+      { src: img.mongoLogo, alt: 'MongoDB Logo' },
+      { src: img.psqlLogo, alt: 'PostgreSQL Logo' },
+      { src: img.graphqlLogo, alt: 'GraphQL Logo' },
+    ],
+  },
+  frontend: {
+    title: 'front-end',
+    item: [
+      { src: img.reactLogo, alt: 'React Logo' },
+      { src: img.jsLogo, alt: 'JavaScript Logo' },
+      { src: img.reduxLogo, alt: 'Redux Logo' },
+      { src: img.tsLogo, alt: 'TypeScript Logo' },
+    ],
+  },
+  tools: {
+    title: 'testings & tools',
+    item: [
+      { src: img.openaiLogo, alt: 'OpenAI Logo' },
+      { src: img.figmaLogo, alt: 'Figma Logo' },
+      { src: img.gitLogo, alt: 'Git Logo' },
+      { src: img.jestLogo, alt: 'Jest Logo' },
+    ],
+  },
 };
 
 export const projects = {

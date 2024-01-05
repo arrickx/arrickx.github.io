@@ -3,6 +3,7 @@ import ExperienceCard from './components/ExperienceCard.jsx';
 import FooterIcon from './components/FooterIcon.jsx';
 import ProjectCard from './components/ProjectCard.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
+import SkillCard from './components/SkillCard.jsx';
 import * as data from './constants/index.js';
 import './index.css';
 
@@ -36,80 +37,22 @@ function App() {
         {/* skills */}
         <SectionHeading
           heading={data.skills.heading}
-          title='skills'
-          subtitle='front-end, back-end, and another-end'
+          title={data.skills.title}
+          subtitle={data.skills.subtitle}
         />
         {/* icons */}
         <section className='section-wrap'>
-          <section className=' max-md:order-2'>
-            <div className='icon-row'>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.nodeLogo} alt='Node.js Logo' />
-              </div>
-              <div className='icon-px bg-zinc-900'>
-                <img
-                  loading='lazy'
-                  src={img.mongoLogo}
-                  alt='MongoDB Logo'
-                  className='p-2.5'
-                />
-              </div>
-            </div>
-            <div className='icon-row'>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.psqlLogo} alt='PostgreSQL Logo' />
-              </div>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.graphqlLogo} alt='GraphQL Logo' />
-              </div>
-            </div>
-            <p className='text-subtitle icon-title'>back-end</p>
-          </section>
+          <SkillCard
+            className='max-md:order-2'
+            skillSet={data.skills.backend}
+          />
 
-          <section className='max-md:order-1'>
-            <div className='icon-row'>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.reactLogo} alt='React Logo' />
-              </div>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.jsLogo} alt='JavaScript Logo' />
-              </div>
-            </div>
-            <div className='icon-row'>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.reduxLogo} alt='Redux Logo' />
-              </div>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.tsLogo} alt='TypeScript Logo' />
-              </div>
-            </div>
-            <p className='text-subtitle icon-title'>front-end</p>
-          </section>
+          <SkillCard
+            className='max-md:order-1'
+            skillSet={data.skills.frontend}
+          />
 
-          <section className='max-md:order-3'>
-            <div className='icon-row'>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.openaiLogo} alt='OpenAI Logo' />
-              </div>
-              <div className='icon-px bg-zinc-900'>
-                <img
-                  loading='lazy'
-                  src={img.figmaLogo}
-                  alt='Figma Logo'
-                  className='p-1.5'
-                />
-              </div>
-            </div>
-            <div className='icon-row'>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.gitLogo} alt='Git Logo' />
-              </div>
-              <div className='icon-px bg-zinc-900'>
-                <img loading='lazy' src={img.jestLogo} alt='Jest Logo' />
-              </div>
-            </div>
-            <p className='text-subtitle icon-title'>testings & tools</p>
-          </section>
+          <SkillCard className='max-md:order-3' skillSet={data.skills.tools} />
         </section>
 
         {/* experiences */}
@@ -120,16 +63,16 @@ function App() {
         />
         <section className='section-wrap'>
           <ExperienceCard
-            company={data.experiences.list[0].company_name}
-            title={data.experiences.list[0].title}
-            date={data.experiences.list[0].date}
-            details={data.experiences.list[0].details}
+            company={data.experiences.one.company_name}
+            title={data.experiences.one.title}
+            date={data.experiences.one.date}
+            details={data.experiences.one.details}
           />
           <ExperienceCard
-            company={data.experiences.list[1].company_name}
-            title={data.experiences.list[1].title}
-            date={data.experiences.list[1].date}
-            details={data.experiences.list[1].details}
+            company={data.experiences.two.company_name}
+            title={data.experiences.two.title}
+            date={data.experiences.two.date}
+            details={data.experiences.two.details}
           />
         </section>
 
