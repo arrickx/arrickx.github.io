@@ -3,7 +3,7 @@ import SkillIcon from './SkillIcon.jsx';
 
 const SkillCard = ({ skillSet }) => {
   return (
-    <section>
+    <section className={skillSet.style}>
       <div className='icon-row'>
         <SkillIcon src={skillSet.item[0].src} alt={skillSet.item[0].alt} />
 

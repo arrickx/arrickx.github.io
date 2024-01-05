@@ -1,4 +1,11 @@
 import * as img from '../assets/index.js';
+export const author = {
+  name:'RICHTER LAU',
+  statement:'In the code flow, building impossible.',
+  statement2:'Always coding, always learning.',
+  src: img.hero,
+  alt: 'Hero Logo'
+}
 export const experiences = {
   heading: 'the History of Innovation',
   title: 'experiences',
@@ -36,6 +43,7 @@ export const skills = {
   subtitle: 'front-end, back-end, and another-end',
   backend: {
     title: 'back-end',
+    style:'max-md:order-2',
     item: [
       { src: img.nodeLogo, alt: 'Node.js Logo' },
       { src: img.mongoLogo, alt: 'MongoDB Logo' },
@@ -45,6 +53,7 @@ export const skills = {
   },
   frontend: {
     title: 'front-end',
+    style:'max-md:order-1',
     item: [
       { src: img.reactLogo, alt: 'React Logo' },
       { src: img.jsLogo, alt: 'JavaScript Logo' },
@@ -54,6 +63,7 @@ export const skills = {
   },
   tools: {
     title: 'testings & tools',
+    style:'max-md:order-3',
     item: [
       { src: img.openaiLogo, alt: 'OpenAI Logo' },
       { src: img.figmaLogo, alt: 'Figma Logo' },

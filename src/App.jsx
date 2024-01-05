@@ -1,6 +1,6 @@
-import * as img from './assets/index.js';
 import ExperienceCard from './components/ExperienceCard.jsx';
 import FooterIcon from './components/FooterIcon.jsx';
+import Header from './components/Header.jsx';
 import ProjectCard from './components/ProjectCard.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
 import SkillCard from './components/SkillCard.jsx';
@@ -12,28 +12,12 @@ function App() {
     <div>
       <div className='font-outfit justify-end items-center bg-stone-950 flex flex-col px-20 py-12 max-md:px-5'>
         {/* hero */}
-        <header className='w-full max-w-[1440px] mt-14 max-md:max-w-full max-md:mt-40 section-break'>
-          <div className='gap-5 flex max-md:flex-col max-md:items-center max-md:gap-0'>
-            <article className='flex flex-col items-stretch w-[55%] mt-[25%] max-md:w-full max-md:ml-0 max-md:mt-20 max-md:order-2'>
-              <div className='justify-center items-stretch flex flex-col'>
-                <h1 className='text-white text-left font-bold text-5xl tracking-widest leading-[80px] max-xl:text-4xl max-md:text-3xl max-md:leading-10  max-md:text-center'>
-                  RICHTER LAU
-                </h1>
-                <p className='text-zinc-400 text-left text-3xl leading-15 max-xl:text-2xl max-lg:text-xl max-md:text-center max-md:mt-6'>
-                  In the code flow, building impossible.
-                </p>
-              </div>
-            </article>
-            <figure className='flex flex-col items-stretch w-[45%] max-w-xl max-md:w-full max-md:max-w-[280px] max-md:order1'>
-              <img
-                loading='lazy'
-                src={img.hero}
-                alt='Hero Image'
-                className='w-full max-md:mt-50 rounded-[50px] '
-              />
-            </figure>
-          </div>
-        </header>
+        <Header
+          name={data.author.name}
+          statement={data.author.statement}
+          src={data.author.src}
+          alt={data.author.alt}
+        />
         {/* skills */}
         <SectionHeading
           heading={data.skills.heading}
@@ -42,17 +26,9 @@ function App() {
         />
         {/* icons */}
         <section className='section-wrap'>
-          <SkillCard
-            className='max-md:order-2'
-            skillSet={data.skills.backend}
-          />
-
-          <SkillCard
-            className='max-md:order-1'
-            skillSet={data.skills.frontend}
-          />
-
-          <SkillCard className='max-md:order-3' skillSet={data.skills.tools} />
+          <SkillCard skillSet={data.skills.backend} />
+          <SkillCard skillSet={data.skills.frontend} />
+          <SkillCard skillSet={data.skills.tools} />
         </section>
 
         {/* experiences */}
@@ -106,7 +82,7 @@ function App() {
         {/* footer */}
         <footer className='max-md:-mt-24'>
           <p className='text-lg md:text-xl lg:text-2xl text-accent'>
-            Always coding, always learning.
+            {data.author.statement2}
           </p>
           <div className='flex flex-row justify-center gap-5 mt-5'>
             <FooterIcon
