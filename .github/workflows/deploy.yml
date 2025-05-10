@@ -5,7 +5,7 @@ on:
   # Runs after pull request finished targeting the default branch
   pull_request:
     types: [closed]
-    branches: ['main']
+    branches: ['main'] # Ensure this only runs if the PR was merged into main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,21 +32,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Updated
         with:
-          node-version: 21
+          node-version: 21 # Consider using an LTS version like 18.x or 20.x for more stability
           cache: 'npm'
       - name: Install dependencies
         run: npm install
       - name: Build
         run: npm run build
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5 # Updated
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3 # Updated
         with:
           # Upload dist repository
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4 # Updated
