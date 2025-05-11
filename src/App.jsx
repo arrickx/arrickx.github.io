@@ -26,9 +26,9 @@ function App() {
         />
         {/* icons */}
         <section className='section-wrap'>
-          <SkillCard skillSet={data.skills.backend} />
-          <SkillCard skillSet={data.skills.frontend} />
-          <SkillCard skillSet={data.skills.tools} />
+          <SkillCard skillSet={data.skills.backend} index={0} />
+          <SkillCard skillSet={data.skills.frontend} index={1} />
+          <SkillCard skillSet={data.skills.tools} index={2} />
         </section>
 
         {/* experiences */}
@@ -43,12 +43,14 @@ function App() {
             title={data.experiences.one.title}
             date={data.experiences.one.date}
             details={data.experiences.one.details}
+            index={0}
           />
           <ExperienceCard
             company={data.experiences.two.company_name}
             title={data.experiences.two.title}
             date={data.experiences.two.date}
             details={data.experiences.two.details}
+            index={1}
           />
         </section>
 
@@ -67,6 +69,7 @@ function App() {
             alt={data.projects.one.alt}
             description={data.projects.one.description}
             tag={data.projects.one.tag}
+            index={0}
           />
 
           <ProjectCard
@@ -76,6 +79,7 @@ function App() {
             alt={data.projects.two.alt}
             description={data.projects.two.description}
             tag={data.projects.two.tag}
+            index={1}
           />
         </section>
 
