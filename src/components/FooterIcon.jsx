@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
 const FooterIcon = ({ href, src, alt }) => {
   return (
-    <a
+    <motion.a
       className='footer-icon bg-zinc-900'
       href={href}
       target='_blank'
       rel='noopener noreferrer'
+      whileHover={{ scale: 1.15, backgroundColor: '#3f3f46' /* zinc-700 */ }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <img loading='lazy' src={src} alt={alt} />
-    </a>
+    </motion.a>
   );
 };
 
