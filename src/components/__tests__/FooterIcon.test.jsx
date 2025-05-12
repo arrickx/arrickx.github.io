@@ -23,6 +23,5 @@ describe('FooterIcon Component', () => {
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
     expect(link).toHaveClass('footer-icon');
-    expect(link).toHaveClass('bg-zinc-900');
   });
 }); 

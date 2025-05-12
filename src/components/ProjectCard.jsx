@@ -31,7 +31,7 @@ const ProjectCard = ({ title, href, src, alt, description, tag, index }) => {
           alt={alt} 
           className='project-img' 
           whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
         />
       </a>
       <p className='project-desc'>{description}</p>

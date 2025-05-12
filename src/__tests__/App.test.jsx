@@ -1,7 +1,32 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import App from '../App';
 import * as data from '../constants/index.js';
+import { ThemeProvider } from '../contexts/ThemeContext';
+
+// Mock window.matchMedia before App tests because ThemeProvider uses it
+let matchMediaMock;
+
+beforeEach(() => {
+  // Reset localStorage mock if you have one globally or per suite
+  // window.localStorage.clear(); // Example if you have a global localStorage mock
+
+  matchMediaMock = vi.fn().mockImplementation(query => ({
+    matches: false, // Default to light mode or any consistent value
+    media: query,
+    onchange: null,
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  }));
+  Object.defineProperty(window, 'matchMedia', { 
+    writable: true, 
+    configurable: true, 
+    value: matchMediaMock 
+  });
+});
 
 // Mock the child components
 vi.mock('../components/Header.jsx', () => ({
@@ -57,7 +82,7 @@ vi.mock('../components/FooterIcon.jsx', () => ({
 
 describe('App Component', () => {
   it('renders the header with correct data', () => {
-    render(<App />);
+    render(<ThemeProvider><App /></ThemeProvider>);
     const header = screen.getByTestId('header-component');
     expect(header).toBeInTheDocument();
     expect(header.textContent).toContain(data.author.name);
@@ -65,7 +90,7 @@ describe('App Component', () => {
   });
 
   it('renders the correct number of skill cards', () => {
-    render(<App />);
+    render(<ThemeProvider><App /></ThemeProvider>);
     const skillCards = screen.getAllByTestId('skill-card');
     expect(skillCards).toHaveLength(3);
     
@@ -76,7 +101,7 @@ describe('App Component', () => {
   });
 
   it('renders the correct number of experience cards', () => {
-    render(<App />);
+    render(<ThemeProvider><App /></ThemeProvider>);
     const experienceCards = screen.getAllByTestId('experience-card');
     expect(experienceCards).toHaveLength(2);
     
@@ -86,7 +111,7 @@ describe('App Component', () => {
   });
 
   it('renders the correct number of project cards', () => {
-    render(<App />);
+    render(<ThemeProvider><App /></ThemeProvider>);
     const projectCards = screen.getAllByTestId('project-card');
     expect(projectCards).toHaveLength(2);
     
@@ -96,7 +121,7 @@ describe('App Component', () => {
   });
 
   it('renders the footer with social links', () => {
-    render(<App />);
+    render(<ThemeProvider><App /></ThemeProvider>);
     const footerIcons = screen.getAllByTestId('footer-icon');
     expect(footerIcons).toHaveLength(3);
     

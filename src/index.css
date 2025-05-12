@@ -8,7 +8,40 @@ html {
 
 /* Default to light mode styles */
 html:not(.dark) {
-  @apply bg-white text-neutral-800;
+  @apply bg-stone-100 text-neutral-700;
+}
+
+html:not(.dark) .openai-icon-wrapper img {
+  filter: invert(1);
+}
+
+/* START: Restore simpler toggle button styles */
+.theme-toggle-button {
+  @apply fixed top-5 right-5 z-50 p-2 rounded-full cursor-pointer;
+  @apply bg-transparent transition-colors duration-300;
+}
+
+.theme-toggle-button.light-mode {
+  @apply hover:bg-neutral-200; /* Light gray hover */
+}
+
+.theme-toggle-button.dark-mode {
+  @apply hover:bg-neutral-700; /* Dark gray hover */
+}
+
+.theme-toggle-icon-container {
+  @apply w-6 h-6 relative;
+}
+
+.theme-toggle-icon-container svg {
+  @apply absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.theme-toggle-icon-container svg.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Dark mode styles */
@@ -27,6 +60,8 @@ li {
   }
   .icon-px {
     @apply flex flex-col justify-center items-center w-[140px] h-[140px] px-9 rounded-[30px] 
+    bg-stone-200
+    dark:bg-neutral-800 dark:hover:bg-neutral-700 
     max-xl:w-[120px] max-xl:h-[120px] max-xl:px-8 
     max-lg:w-[100px] max-lg:h-[100px] max-lg:px-7
     max-md:w-[110px] max-md:h-[110px] max-md:px-7;
@@ -53,17 +88,17 @@ li {
     max-xl:text-base;
   }
   .text-title {
-    @apply text-neutral-800 dark:text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
+    @apply text-neutral-700 dark:text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
   }
   .text-title2 {
-    @apply text-neutral-800 dark:text-white text-center text-2xl font-bold tracking-wider;
+    @apply text-neutral-700 dark:text-white text-center text-2xl font-bold tracking-wider;
   }
   .text-subtitle {
-    @apply text-neutral-500 dark:text-zinc-400 text-center text-xl tracking-wide 
+    @apply text-neutral-500 dark:text-zinc-300 text-center text-xl tracking-wide 
     max-lg:text-base;
   }
   .text-desc {
-    @apply text-neutral-500 dark:text-zinc-400 text-left text-xl tracking-wide list-disc ml-8 mt-5
+    @apply text-neutral-500 dark:text-zinc-300 text-left text-xl tracking-wide list-disc ml-8 mt-5
     max-lg:text-base
     max-md:w-[280px] max-md:mb-16;
   }
@@ -82,6 +117,8 @@ li {
   }
   .footer-icon {
     @apply w-[50px] h-[50px] rounded-full p-2
+    bg-stone-200 
+    dark:bg-neutral-800 dark:hover:bg-neutral-700 
     max-xl:w-[50x] max-xl:h-[50px] 
     max-lg:w-[40px] max-lg:h-[40px] ;
   }

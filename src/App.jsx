@@ -6,28 +6,12 @@ import SectionHeading from './components/SectionHeading.jsx';
 import SkillCard from './components/SkillCard.jsx';
 import * as data from './constants/index.js';
 import './index.css';
-import { useTheme } from './hooks/useTheme';
+import ThemeToggleButton from './components/ThemeToggleButton.jsx';
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
-
   return (
     <div>
-      <button
-        onClick={toggleTheme}
-        style={{
-          position: 'fixed',
-          top: '20px',
-          right: '20px',
-          padding: '10px 20px',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          zIndex: 1000,
-        }}
-        className='bg-accent text-white dark:bg-gray-700 dark:text-gray-300'
-      >
-        Toggle to {theme === 'light' ? 'Dark' : 'Light'} Mode
-      </button>
+      <ThemeToggleButton />
       <div className='font-outfit justify-end items-center flex flex-col px-20 py-12 max-md:px-5'>
         {/* hero */}
         <Header
