@@ -2,10 +2,13 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 const SkillIcon = ({ src, alt }) => {
+  const isOpenAiIcon = alt === 'OpenAI Logo';
+
   return (
     <motion.div 
-      className='icon-px bg-zinc-900'
-      whileHover={{ scale: 1.1, backgroundColor: '#52525b' /* zinc-600 */ }}
+      className={`icon-px ${isOpenAiIcon ? 'openai-icon-wrapper' : ''}`}
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 200, damping: 10 }}
     >
       <img loading='lazy' src={src} alt={alt} />
     </motion.div>

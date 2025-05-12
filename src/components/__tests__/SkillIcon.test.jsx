@@ -19,6 +19,5 @@ describe('SkillIcon Component', () => {
     render(<SkillIcon {...mockProps} />);
     const container = screen.getByAltText(mockProps.alt).closest('div');
     expect(container).toHaveClass('icon-px');
-    expect(container).toHaveClass('bg-zinc-900');
   });
 }); 
