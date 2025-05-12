@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply transition-colors duration-500;
+}
+
+/* Default to light mode styles */
+html:not(.dark) {
+  @apply bg-white text-neutral-800;
+}
+
+/* Dark mode styles */
+html.dark {
+  @apply bg-neutral-900 text-white;
+}
+
 li {
   padding-top: 5px;
 }
@@ -33,22 +47,23 @@ li {
     max-md:self-center;
   }
   .text-head {
+    /* Accent color should remain consistent for both modes unless specified otherwise */
     @apply text-accent text-center text-xl font-bold tracking-wider uppercase 
     max-md:max-w-full
     max-xl:text-base;
   }
   .text-title {
-    @apply text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
+    @apply text-neutral-800 dark:text-white text-center text-3xl font-bold tracking-wider whitespace-nowrap;
   }
   .text-title2 {
-    @apply text-white text-center text-2xl font-bold tracking-wider;
+    @apply text-neutral-800 dark:text-white text-center text-2xl font-bold tracking-wider;
   }
   .text-subtitle {
-    @apply text-zinc-400 text-center text-xl tracking-wide 
+    @apply text-neutral-500 dark:text-zinc-400 text-center text-xl tracking-wide 
     max-lg:text-base;
   }
   .text-desc {
-    @apply text-zinc-400 text-left text-xl tracking-wide list-disc ml-8 mt-5
+    @apply text-neutral-500 dark:text-zinc-400 text-left text-xl tracking-wide list-disc ml-8 mt-5
     max-lg:text-base
     max-md:w-[280px] max-md:mb-16;
   }
@@ -61,7 +76,7 @@ li {
     max-md:w-[230px];
   }
   .project-desc {
-    @apply text-zinc-400 text-left text-xl tracking-wide ml-8 mt-3
+    @apply text-neutral-500 dark:text-zinc-400 text-left text-xl tracking-wide ml-8 mt-3
     max-lg:text-base
     max-md:w-[280px];
   }
