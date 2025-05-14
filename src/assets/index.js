@@ -11,7 +11,6 @@ import linkedinLogo from './linkedin.png';
 import mongoLogo from './mongodb.png';
 import nodeLogo from './nodejs.png';
 import openaiLogo from './openai.png';
-import hero from './owl.jpeg';
 import psqlLogo from './psql.png';
 import reactLogo from './react.png';
 import reduxLogo from './redux.png';
@@ -26,7 +25,6 @@ export {
   githubLogo,
   gptLogo,
   graphqlLogo,
-  hero,
   jestLogo,
   jsLogo,
   lastresortLogo,
