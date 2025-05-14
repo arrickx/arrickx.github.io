@@ -16,6 +16,8 @@ import psqlLogo from './psql.png';
 import reactLogo from './react.png';
 import reduxLogo from './redux.png';
 import tsLogo from './ts.png';
+import owlLight from './owl-light.png';
+import owlDark from './owl-dark.png';
 
 export {
   emailLogo,
@@ -36,4 +38,6 @@ export {
   reactLogo,
   reduxLogo,
   tsLogo,
+  owlLight,
+  owlDark,
 };
