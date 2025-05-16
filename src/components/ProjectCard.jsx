@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
+// Animation configuration for staggered card reveal with spring effect on hover
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i) => ({
@@ -13,6 +14,7 @@ const cardVariants = {
   }),
 };
 
+// Displays a project card with title, image, description, and tech stack tags
 const ProjectCard = ({ title, href, src, alt, description, tag, index }) => {
   return (
     <motion.div 

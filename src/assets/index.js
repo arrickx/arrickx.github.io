@@ -11,11 +11,12 @@ import linkedinLogo from './linkedin.png';
 import mongoLogo from './mongodb.png';
 import nodeLogo from './nodejs.png';
 import openaiLogo from './openai.png';
-import hero from './owl.jpeg';
 import psqlLogo from './psql.png';
 import reactLogo from './react.png';
 import reduxLogo from './redux.png';
 import tsLogo from './ts.png';
+import owlLight from './owl-light.png';
+import owlDark from './owl-dark.png';
 
 export {
   emailLogo,
@@ -24,7 +25,6 @@ export {
   githubLogo,
   gptLogo,
   graphqlLogo,
-  hero,
   jestLogo,
   jsLogo,
   lastresortLogo,
@@ -36,4 +36,6 @@ export {
   reactLogo,
   reduxLogo,
   tsLogo,
+  owlLight,
+  owlDark,
 };

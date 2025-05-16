@@ -3,7 +3,7 @@ export const author = {
   name:'RICHTER LAU',
   statement:'In the code flow, building impossible.',
   statement2:'Always coding, always learning.',
-  src: img.hero,
+  src: img.owlLight,
   alt: 'Hero Logo'
 }
 export const experiences = {
