@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import App from '../App';
 import * as data from '../constants/index.js';
-import { ThemeProvider } from '../contexts/ThemeContext';
+import { ThemeProvider } from '../components/ThemeToggleButton.jsx';
 
 // Mock window.matchMedia before App tests because ThemeProvider uses it
 let matchMediaMock;
