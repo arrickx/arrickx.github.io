@@ -2,18 +2,20 @@ import PropTypes from 'prop-types';
 import SkillIcon from './SkillIcon.jsx';
 import { motion } from 'framer-motion';
 
+// Animation configuration for staggered card reveal
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2, // Stagger delay
+      delay: i * 0.2,
       duration: 0.5,
     },
   }),
 };
 
+// Displays a grid of skill icons with animated entrance
 const SkillCard = ({ skillSet, index }) => {
   return (
     <motion.section 

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
+// Hero section component with staggered animations for text and image
 const Header = ({ name, statement, src, alt }) => {
   return (
     <header className='w-full max-w-[1440px] mt-14 max-md:max-w-full max-md:mt-40 section-break'>

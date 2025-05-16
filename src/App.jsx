@@ -8,32 +8,30 @@ import * as data from './constants/index.js';
 import './index.css';
 import ThemeToggleButton from './components/ThemeToggleButton.jsx';
 
+// Main application component that renders the portfolio layout
 function App() {
   return (
     <div>
       <ThemeToggleButton />
       <div className='font-outfit justify-end items-center flex flex-col px-20 py-12 max-md:px-5'>
-        {/* hero */}
         <Header
           name={data.author.name}
           statement={data.author.statement}
           src={data.author.src}
           alt={data.author.alt}
         />
-        {/* skills */}
+
         <SectionHeading
           heading={data.skills.heading}
           title={data.skills.title}
           subtitle={data.skills.subtitle}
         />
-        {/* icons */}
         <section className='section-wrap'>
           <SkillCard skillSet={data.skills.backend} index={0} />
           <SkillCard skillSet={data.skills.frontend} index={1} />
           <SkillCard skillSet={data.skills.tools} index={2} />
         </section>
 
-        {/* experiences */}
         <SectionHeading
           heading={data.experiences.heading}
           title={data.experiences.title}
@@ -56,7 +54,6 @@ function App() {
           />
         </section>
 
-        {/* projects */}
         <SectionHeading
           heading={data.projects.heading}
           title={data.projects.title}
@@ -85,7 +82,6 @@ function App() {
           />
         </section>
 
-        {/* footer */}
         <footer className='max-md:-mt-24'>
           <p className='text-lg md:text-xl lg:text-2xl text-accent'>
             {data.author.statement2}
