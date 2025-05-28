@@ -44,6 +44,25 @@ html:not(.dark) .openai-icon-wrapper img {
   transform: scale(1);
 }
 
+/* Ask Button Styles */
+.ask-button {
+  @apply fixed bottom-5 right-5 z-50 p-2 rounded-full cursor-pointer;
+  @apply bg-transparent transition-colors duration-300;
+  @apply text-accent;
+}
+
+.ask-button:hover {
+  @apply bg-accent/10;
+}
+
+.ask-icon-container {
+  @apply w-7 h-7;
+}
+
+.ask-icon-container svg {
+  @apply w-full h-full transition-all duration-300 ease-in-out;
+}
+
 /* Dark mode styles */
 html.dark {
   @apply bg-neutral-900 text-white;
@@ -60,7 +79,7 @@ li {
   }
   .icon-px {
     @apply flex flex-col justify-center items-center w-[140px] h-[140px] px-9 rounded-[30px] 
-    bg-stone-200
+    bg-stone-400/10
     dark:bg-neutral-800 dark:hover:bg-neutral-700 
     max-xl:w-[120px] max-xl:h-[120px] max-xl:px-8 
     max-lg:w-[100px] max-lg:h-[100px] max-lg:px-7
@@ -117,7 +136,7 @@ li {
   }
   .footer-icon {
     @apply w-[50px] h-[50px] rounded-full p-2
-    bg-stone-200 
+    bg-accent/10
     dark:bg-neutral-800 dark:hover:bg-neutral-700 
     max-xl:w-[50x] max-xl:h-[50px] 
     max-lg:w-[40px] max-lg:h-[40px] ;
