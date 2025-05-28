@@ -136,7 +136,7 @@ li {
   }
   .footer-icon {
     @apply w-[50px] h-[50px] rounded-full p-2
-    bg-stone-200 
+    bg-accent/10
     dark:bg-neutral-800 dark:hover:bg-neutral-700 
     max-xl:w-[50x] max-xl:h-[50px] 
     max-lg:w-[40px] max-lg:h-[40px] ;
