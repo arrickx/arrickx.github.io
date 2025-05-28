@@ -7,12 +7,14 @@ import SkillCard from './components/SkillCard.jsx';
 import * as data from './constants/index.js';
 import './index.css';
 import ThemeToggleButton from './components/ThemeToggleButton.jsx';
+import AskButton from './components/AskButton.jsx';
 
 // Main application component that renders the portfolio layout
 function App() {
   return (
     <div>
       <ThemeToggleButton />
+      <AskButton />
       <div className='font-outfit justify-end items-center flex flex-col px-20 py-12 max-md:px-5'>
         <Header
           name={data.author.name}
