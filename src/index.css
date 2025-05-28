@@ -48,15 +48,15 @@ html:not(.dark) .openai-icon-wrapper img {
 .ask-button {
   @apply fixed bottom-5 right-5 z-50 p-2 rounded-full cursor-pointer;
   @apply bg-transparent transition-colors duration-300;
-  @apply text-neutral-700 dark:text-white;
+  @apply text-accent;
 }
 
 .ask-button:hover {
-  @apply bg-neutral-200 dark:bg-neutral-700;
+  @apply bg-accent/10;
 }
 
 .ask-icon-container {
-  @apply w-6 h-6;
+  @apply w-7 h-7;
 }
 
 .ask-icon-container svg {
