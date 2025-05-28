@@ -79,7 +79,7 @@ li {
   }
   .icon-px {
     @apply flex flex-col justify-center items-center w-[140px] h-[140px] px-9 rounded-[30px] 
-    bg-stone-200
+    bg-stone-400/10
     dark:bg-neutral-800 dark:hover:bg-neutral-700 
     max-xl:w-[120px] max-xl:h-[120px] max-xl:px-8 
     max-lg:w-[100px] max-lg:h-[100px] max-lg:px-7
