@@ -1,7 +1,7 @@
 // Ask button component positioned in the lower right corner
 const AskButton = () => {
   const handleClick = () => {
-    window.open('https://ama-omega-five.vercel.app/', '_blank');
+    window.open('https://richterlau.vercel.app/', '_blank');
   };
 
   return (
