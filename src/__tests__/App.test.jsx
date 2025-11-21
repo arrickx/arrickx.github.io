@@ -21,10 +21,10 @@ beforeEach(() => {
     removeEventListener: vi.fn(),
     dispatchEvent: vi.fn(),
   }));
-  Object.defineProperty(window, 'matchMedia', { 
-    writable: true, 
-    configurable: true, 
-    value: matchMediaMock 
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    configurable: true,
+    value: matchMediaMock
   });
 });
 
@@ -93,7 +93,7 @@ describe('App Component', () => {
     render(<ThemeProvider><App /></ThemeProvider>);
     const skillCards = screen.getAllByTestId('skill-card');
     expect(skillCards).toHaveLength(3);
-    
+
     // Check the titles of skill cards
     expect(skillCards[0].textContent).toContain(data.skills.backend.title);
     expect(skillCards[1].textContent).toContain(data.skills.frontend.title);
@@ -104,27 +104,27 @@ describe('App Component', () => {
     render(<ThemeProvider><App /></ThemeProvider>);
     const experienceCards = screen.getAllByTestId('experience-card');
     expect(experienceCards).toHaveLength(2);
-    
+
     // Check the company names
-    expect(experienceCards[0].textContent).toContain(data.experiences.one.company_name);
-    expect(experienceCards[1].textContent).toContain(data.experiences.two.company_name);
+    expect(experienceCards[0].textContent).toContain(data.experiences.items[0].company_name);
+    expect(experienceCards[1].textContent).toContain(data.experiences.items[1].company_name);
   });
 
   it('renders the correct number of project cards', () => {
     render(<ThemeProvider><App /></ThemeProvider>);
     const projectCards = screen.getAllByTestId('project-card');
     expect(projectCards).toHaveLength(2);
-    
+
     // Check the project titles
-    expect(projectCards[0].textContent).toContain(data.projects.one.name);
-    expect(projectCards[1].textContent).toContain(data.projects.two.name);
+    expect(projectCards[0].textContent).toContain(data.projects.items[0].name);
+    expect(projectCards[1].textContent).toContain(data.projects.items[1].name);
   });
 
   it('renders the footer with social links', () => {
     render(<ThemeProvider><App /></ThemeProvider>);
     const footerIcons = screen.getAllByTestId('footer-icon');
     expect(footerIcons).toHaveLength(3);
-    
+
     // Check that the links are correct
     expect(footerIcons[0]).toHaveAttribute('href', data.github.address);
     expect(footerIcons[1]).toHaveAttribute('href', data.linkedin.address);

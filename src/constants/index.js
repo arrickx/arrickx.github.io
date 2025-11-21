@@ -10,7 +10,8 @@ export const experiences = {
   heading: 'the History of Innovation',
   title: 'experiences',
   subtitle: 'traditional, non-tranditional',
-  one:{
+  items: [
+    {
       title: 'Software Engineer',
       company_name: 'IMAGINEXT',
       date: '2022 - Current',
@@ -23,7 +24,7 @@ export const experiences = {
         'Product developed under tech accelerator with OS Labs (opensourcelabs.io)',
       ],
     },
-    two:{
+    {
       title: 'Market Risk Associate',
       company_name: 'CHINA MERCHANTS BANK',
       date: '2016 - Current',
@@ -35,6 +36,7 @@ export const experiences = {
         'Designed and maintained monthly transaction reports using SQL databases, guaranteeing reliable summary statistics.',
       ],
     },
+  ],
 };
 
 export const skills = {
@@ -77,24 +79,26 @@ export const projects = {
   heading: 'From zero to pixels',
   title: 'projects',
   subtitle: 'code caffeine, code brew',
-  one: {
-    name: 'OpenAI Exploration',
-    address: 'https://github.com/arrickx/openai-exploration',
-    src: img.gptLogo,
-    alt: 'GPT Project Icon',
-    description:
-      'This project demonstrates various functionalities of the OpenAI API,including chat, Document QA, function calling, and semantic search.',
-    tag: '#openai #langchain #javascript',
-  },
-  two: {
-    name: 'LastResort',
-    address: 'https://github.com/arrickx/lastResort',
-    src: img.lastresortLogo,
-    alt: 'LastResort Project Icon',
-    description:
-      'A website where anonymous micro-stories capture the fleeting essence of daily life, inviting you to share, reflect, and connect.',
-    tag: '#react #express #webpack',
-  },
+  items: [
+    {
+      name: 'OpenAI Exploration',
+      address: 'https://github.com/arrickx/openai-exploration',
+      src: img.gptLogo,
+      alt: 'GPT Project Icon',
+      description:
+        'This project demonstrates various functionalities of the OpenAI API,including chat, Document QA, function calling, and semantic search.',
+      tag: '#openai #langchain #javascript',
+    },
+    {
+      name: 'LastResort',
+      address: 'https://github.com/arrickx/lastResort',
+      src: img.lastresortLogo,
+      alt: 'LastResort Project Icon',
+      description:
+        'A website where anonymous micro-stories capture the fleeting essence of daily life, inviting you to share, reflect, and connect.',
+      tag: '#react #express #webpack',
+    },
+  ],
 };
 
 export const github = {

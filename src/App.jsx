@@ -40,20 +40,16 @@ function App() {
           subtitle={data.experiences.subtitle}
         />
         <section className='section-wrap'>
-          <ExperienceCard
-            company={data.experiences.one.company_name}
-            title={data.experiences.one.title}
-            date={data.experiences.one.date}
-            details={data.experiences.one.details}
-            index={0}
-          />
-          <ExperienceCard
-            company={data.experiences.two.company_name}
-            title={data.experiences.two.title}
-            date={data.experiences.two.date}
-            details={data.experiences.two.details}
-            index={1}
-          />
+          {data.experiences.items.map((experience, index) => (
+            <ExperienceCard
+              key={index}
+              company={experience.company_name}
+              title={experience.title}
+              date={experience.date}
+              details={experience.details}
+              index={index}
+            />
+          ))}
         </section>
 
         <SectionHeading
@@ -63,25 +59,18 @@ function App() {
         />
 
         <section className='section-wrap'>
-          <ProjectCard
-            title={data.projects.one.name}
-            href={data.projects.one.address}
-            src={data.projects.one.src}
-            alt={data.projects.one.alt}
-            description={data.projects.one.description}
-            tag={data.projects.one.tag}
-            index={0}
-          />
-
-          <ProjectCard
-            title={data.projects.two.name}
-            href={data.projects.two.address}
-            src={data.projects.two.src}
-            alt={data.projects.two.alt}
-            description={data.projects.two.description}
-            tag={data.projects.two.tag}
-            index={1}
-          />
+          {data.projects.items.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.name}
+              href={project.address}
+              src={project.src}
+              alt={project.alt}
+              description={project.description}
+              tag={project.tag}
+              index={index}
+            />
+          ))}
         </section>
 
         <footer className='max-md:-mt-24'>
